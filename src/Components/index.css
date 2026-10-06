@@ -1,0 +1,16 @@
+img {
+    animation: jump 1s infinite;
+}
+
+/* I want the image to jump up and down when hovered over, but I want it to jump up and down and to the right reaching the right side of the page. it's reset, i dont want to reset i want it to keep jumping */
+@keyframes jump {
+    0% {
+        transform: translateY(20px) translateX(0);
+    }
+    50% {
+        transform: translateY(0px) translateX(50px);
+    }
+    100% {
+        transform: translateY(20px) translateX(0);
+    }
+}
