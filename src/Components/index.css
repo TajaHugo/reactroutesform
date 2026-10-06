@@ -2,6 +2,74 @@ img {
     animation: jump 1s infinite;
 }
 
+.container {
+    width: 100%;
+    flex: 0 0 auto;
+}
+
+.nav {
+    width: 100%;
+    min-height: 68px;
+    padding: 0.5rem clamp(1rem, 3vw, 2.5rem);
+    box-sizing: border-box;
+    background: linear-gradient(120deg, #1769aa, #1e90ff);
+    box-shadow: 0 3px 12px rgb(23 67 102 / 18%);
+}
+
+.nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+    width: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-link {
+    position: relative;
+    display: block;
+    padding: 0.75rem clamp(0.55rem, 1.2vw, 1rem);
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+}
+
+.nav-link::after {
+    position: absolute;
+    right: 0.8rem;
+    bottom: 0.4rem;
+    left: 0.8rem;
+    height: 2px;
+    border-radius: 2px;
+    background-color: white;
+    content: '';
+    transform: scaleX(0);
+    transition: transform 0.2s ease;
+}
+
+.nav-link:hover,
+.nav-link:focus-visible {
+    background-color: rgb(255 255 255 / 14%);
+}
+
+.nav-link:hover::after,
+.nav-link:focus-visible::after {
+    transform: scaleX(1);
+}
+
+.page-content {
+    display: grid;
+    flex: 1;
+    place-items: center;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
 /* I want the image to jump up and down when hovered over, but I want it to jump up and down and to the right reaching the right side of the page. it's reset, i dont want to reset i want it to keep jumping */
 @keyframes jump {
     0% {
