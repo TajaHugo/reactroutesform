@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import './index.css'
-import { Link } from 'react-router-dom'
 
 export default class Cine extends Component {
     render() {
